@@ -144,7 +144,7 @@ h6 {
 --------------------------------------------------------------*/
 .header {
   color: var(--default-color);
-  background-color: var(--background-color);
+  background-color: #3a7a89;
   position: fixed;
   top: 0;
   left: 0;
@@ -359,6 +359,32 @@ h6 {
 .navmenu .dropdown>.dropdown-active {
   display: block;
   background-color: rgba(33, 37, 41, 0.03);
+}
+
+/* Images gallery styling */
+.image-gallery {
+  display: flex;               /* Flex layout */
+  flex-direction: column;      /* Vertically stack images */
+  align-items: center;         /* Images ko center align kare */
+  margin-top: 20px;            /* Navbar se gap */
+  gap: 20px;                   /* Images ke beech spacing */
+  width: 100%;                 /* Container ki width 100% */
+}
+
+/* First image styling */
+.image1 {
+  width: 104%;                  /* Adjust width for first image */
+  height: 59px;                /* Adjust height for first image */
+  object-fit: cover;           /* Image ko container mein fit kare */
+  border-radius: 5px;          /* Round corners */
+}
+
+/* Second image styling */
+.image2 {
+  width: 104%;                  /* Adjust width for second image */
+  height: 128px;                /* Adjust height for second image */
+  object-fit: cover;           /* Image ko container mein fit kare */
+  border-radius: 5px;          /* Round corners */
 }
 
 /*--------------------------------------------------------------
@@ -608,7 +634,18 @@ section,
   color: var(--accent-color);
 }
 
+/* Responsive adjustments for mobile view */
 @media (max-width: 768px) {
+  .hero {
+    min-height: 25vh; /* Adjust hero section height for mobile if needed */
+  }
+
+  .hero img {
+    height: auto; /* Adjust height to auto to make it smaller on mobile */
+    object-fit: contain; /* Makes the image fit within the section without cropping */
+    max-height: 300px; /* Set max height to control image size on mobile */
+  }
+
   .hero h2 {
     font-size: 32px;
   }
